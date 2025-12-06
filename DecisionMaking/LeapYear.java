@@ -20,6 +20,14 @@
 
         }
 
+        // year%100==0 AND year%400==0   --> Leap Year
+        // year%4==0  Leap Year
+        //(year%100==0 && year%400==0) || (year%4==0)
+        // if((year%100==0 && year%400==0) || (year%4==0))
+        //   else
+
+        // year%100!=0 && year%4==0
+
     }
 
  }

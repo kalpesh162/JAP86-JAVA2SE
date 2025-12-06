@@ -13,7 +13,7 @@ class TriangleSideValid{
 		side3=scanner.nextInt();
 
 		// 10  3  4
-		// (side1+side2)>side3  || side2+side3>side1 || side3+side1>side2
+		// (side1+side2)>side3  && side2+side3>side1 && side3+side1>side2
 		if((side1+side2)>side3  && (side2+side3)>side1 && (side3+side1)>side2){
 			System.out.println("Valid triangle");
 		}

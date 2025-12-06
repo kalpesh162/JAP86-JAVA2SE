@@ -35,7 +35,41 @@ class Grade{
 		// Narrowing 
 		// Widening
 
-		System.out.println(totalMarks);
+		
+
+		double percentage=(totalMarks/500.0)*100;
+
+		if(percentage>=90){
+				System.out.println(" Grade A");
+		}
+		else if(percentage>=80){
+			System.out.println(" Grade B");	
+		}
+		else if(percentage>=70){
+			System.out.println(" Grade C");	
+		}
+		else if(percentage>=60){
+			System.out.println(" Grade D");	
+		}
+		else if(percentage>=40){
+			System.out.println(" Grade F");	
+		}
+		else{
+			System.out.println("FAIL  F");
+		}
+
+		System.out.println("Marks Details :  ");
+		System.out.println("Physics       "+phy);
+		System.out.println("Chemistry     "+chem);
+		System.out.println("Biology       "+bio);
+		System.out.println("Mathematics   "+math);
+		System.out.println("Computer      "+comp);
+		System.out.println("____________________________________________");
+		System.out.println("Total Marks : "+totalMarks);
+		System.out.println("Percentage :  "+percentage);
+
+
+
 		// HW
 	}
 }
