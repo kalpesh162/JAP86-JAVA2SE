@@ -1,0 +1,25 @@
+  	
+
+	# Ignore Java compiled files
+*.class
+
+# Ignore Eclipse workspace metadata
+.metadata/
+Servers/
+
+# Ignore build output
+bin/
+build/
+target/
+
+# Ignore IntelliJ/IDEA
+*.iml
+.idea/
+
+# Ignore logs
+*.log
+
+# Ignore temporary system files
+*.tmp
+*.swp
+.DS_Store
