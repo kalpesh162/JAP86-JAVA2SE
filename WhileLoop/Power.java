@@ -15,3 +15,6 @@ class Power{
 			System.out.println(sum);
 	}
 }
+
+
+//Write a Java program to enter any number and calculate its factorial.
