@@ -1,5 +1,9 @@
 /*
-
+11111
+ 2222
+  333
+   44
+    5
 */
 import java.util.Scanner;
 class Program12{
