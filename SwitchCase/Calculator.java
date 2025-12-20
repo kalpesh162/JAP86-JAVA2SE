@@ -1,7 +1,5 @@
 import java.util.Scanner;
-
 class Calculator{
-
 	public static void main(String[] args) {
 			int num1,num2,res;
 			char symbol;
