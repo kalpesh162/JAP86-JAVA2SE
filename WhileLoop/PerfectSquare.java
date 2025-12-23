@@ -10,8 +10,7 @@ class PerfectSquare{
 		 // Widening
 		 //  long<---int
 		 //  long<---(long)int
-		 
-
+		
 		 int root=(int)(Math.sqrt(num));
 
 		 if(root*root==num){
