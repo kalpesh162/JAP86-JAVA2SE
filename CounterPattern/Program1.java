@@ -10,11 +10,11 @@ import java.util.Scanner;
 class Program1{
 
 	static  void printPattern(int N){
-		int cnt=15;
+		int cnt=1;
 		for(int i=1;i<=N;i++){
 				for(int j=1;j<=i;j++){
 					System.out.print(cnt+"\t");
-					cnt--;
+					cnt++;
 				}
 				System.out.println();
 			}	
@@ -24,6 +24,18 @@ class Program1{
 		System.out.println("Enter N Value");
 		Scanner scanner=new Scanner(System.in);
 		N=scanner.nextInt();
-		printPattern(N);	
+		printPattern(N);
+		System.out.println();
+		int cnt=1;
+		for(int i=1;i<=N;i++){
+
+			for(int j=1;j<=i;j++){
+
+				System.out.print(cnt+"\t");
+				cnt++;
+			}
+			System.out.println();
+		}
+		
 	}
 }
