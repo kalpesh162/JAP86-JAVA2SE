@@ -13,7 +13,7 @@ class Data{
   void displayData(){
   	System.out.println("Boolean  "+is);
   	System.out.println("Byte  "+bt);
-  	System.out.println("Char  "+letter);
+  	System.out.println("Char  "+letter);  // '/u0000'  '/uFFFF'
   	System.out.println("Short  "+sh);
   	System.out.println("Int  "+in);
   	System.out.println("LOng  "+lo);
