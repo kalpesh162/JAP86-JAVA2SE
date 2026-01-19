@@ -4,13 +4,16 @@
    1 2 1
   1 3 3 1
  1 4 6 4 1
+
+  n!
+  ---
+  k!(n-k)!
+
  */
 class PascalTriangle{
 	public static void main(String[] args) {
 		
 		int num=4;
-
-
 		for(int n=0;n<=num;n++){
 				for(int sp=n;sp<=num;sp++)
 					System.out.print(" ");
