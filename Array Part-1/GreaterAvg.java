@@ -4,7 +4,6 @@ class GreaterAvg{
 		 int sum=0;
 		 for(int i=0;i<A.length;i++)
 		    sum+=A[i];
-
 		return (sum*1.0)/A.length;
 	}
 
@@ -15,14 +14,9 @@ class GreaterAvg{
 				 if(A[i]>avg)
 				 	System.out.print(A[i]+" ");
 			}
-
 	}
-
-	public static void main(String[] args) {
-		
+	public static void main(String[] args) {		
 			int A[]={10,20,30,40,50};
-
 			printGreaterThanAvg(A);
-
 	}
 }
