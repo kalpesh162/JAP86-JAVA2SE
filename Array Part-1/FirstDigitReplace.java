@@ -4,6 +4,20 @@ WAP to replace each elements with their first digit of element
 Example Input:
 input: {123,235,6754,3257,64,2367,288,35,645,374}
 Output:{1,2,6,3,6,2,2,3,6,3}
+
+Alternate Solution
+
+public static void replaceFirstDigits(int A[]){
+		for(int i=0;i<A.length;i++){
+			int num1=A[i];
+			while(num1>9)
+				num1=num1/10;
+			
+			A[i]=num1;
+		
+		}
+
+
 */
 class FirstDigitReplace{
 	public static void display(int A[]){
