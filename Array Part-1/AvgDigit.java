@@ -1,3 +1,10 @@
+/*
+Array Case 24: Replace Each Element with Average of Digits
+ WAP to replace each elements with their avg of digit
+ Example Input:
+input: {123,235,6754,3257,64,2367,288,35,645,374,56}
+Output: {2, 3, 5, 4, 5, 4, 6, 4, 5, 4, 5}
+*/
 class AvgDigit{
 
 	static int sumOfDigit(int num){

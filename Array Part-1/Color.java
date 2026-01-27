@@ -8,7 +8,6 @@ class Color{
 	}
 
 	static void replaceWithColorCode(int A[]){
-
 		for(int i=0;i<A.length;i++){
 			  int num=A[i];
 			  if(num%6==0 && is6Present(num)){
