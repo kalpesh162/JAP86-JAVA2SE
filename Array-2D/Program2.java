@@ -1,3 +1,4 @@
+// Jagged Array
 class Program2{
 		
 		static void display(int B[][]){
