@@ -1,11 +1,8 @@
 package  p2;
 import static  p1.Student.getInstituteName;
 //static import  p1.Student.getInstituteName;
-
 import static java.lang.Math.pow;
-
 import static java.lang.System.out;
-
 class App{
 	public static void main(String[] args) {
 		/*
@@ -28,7 +25,5 @@ class App{
 		out.print("Hello");
 
 		// Whats the diff between import and static import
-		
-
 	}
 }
