@@ -1,6 +1,4 @@
-
 class Operation{
-
 	void doAdd(int x,int y){   // doAdd2i
 		 System.out.println(x+y);
 	}
@@ -14,14 +12,12 @@ class Operation{
 		 System.out.println(x+y);
 	}
 }
-
 class App{
 	public static void main(String[] args) {
 		Operation op=new Operation();
 		// Binding od method call decides at compike time called as Compiler Time Polymormism
 		// Early Binding
 		// Static Binding
-
 		op.doAdd(11,22);
 		// What is Op  --> Op is a type Operation
 		// Operation --> doAdd
