@@ -4,7 +4,6 @@ class Instrument{
 		System.out.println("Instrument is playing...");
 	}
 }
-
 // Guitar is an Instrument
 // Guitar is Sub Class
 // Instrument Super Class
