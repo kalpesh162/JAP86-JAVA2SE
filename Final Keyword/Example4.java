@@ -17,9 +17,11 @@ class Ticket{
 
 class MakeMyTrip{
 	 public static void displayTicket(final Ticket ticket){
-	 		//ticket.name="Rajesh";
-	 	//   Ticket ticket=new Ticket();
-	 	  // ticket=ticket;
+	 		//ticket.name="Rajesh";  // If we want field not to bec changed inside Object --> Then Make field as a final
+	 	
+	 		
+	 		// If ref not to be used by some other Object make reference type final
+	 	  	// ticket=new Ticket("Ravi",28,'M',45,"Pune Patana Exp");;
 	 }
 }
 
@@ -28,7 +30,7 @@ class Example4{
 
 		Ticket ticket=new Ticket("Kalpesh",24,'M',55,"Maharstra Exp");
 
-			MakeMyTrip(ticket);
+			MakeMyTrip.displayTicket(ticket);
 		
 	}
 }
