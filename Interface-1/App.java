@@ -50,7 +50,7 @@ class App{
 	}
 
 	public static void main(String[] args) {
-			// we cant create an Object of interface
+					// we cant create an Object of interface
 			tune(new Guitar());
 			tune(new Violin());
 			tune(new Flute());
@@ -59,3 +59,8 @@ class App{
 			System.out.println(Guitar.x);
 	}
 }
+
+// Note
+// Qustion Whats diff between final and const
+//const int x=11; // illegal start of expression
+	
