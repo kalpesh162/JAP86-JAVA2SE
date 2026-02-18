@@ -3,24 +3,18 @@ abstract class Instrument{
 	// if logically method is incomplete the will declare as abstract method
 	// abstract method doesnt have body(define )
 	abstract void play();
-
 	//methods
-
 }
-
 // Not necessary  if class is abstract then there is no need that every method should be abstract
 /*
 abstract class Instrument{
 	void f1(){ }
 }
 */
-
 /*
 abstract class Guitar extends Instrument{
-
 }
 */
-
  class Guitar extends Instrument{
  	// 
  	@Override
@@ -68,3 +62,12 @@ class App{
 		tune(new Flute());
 	}
 }
+
+// abstarc class   --> class Object cant be created
+
+// Why We create Abstract class
+
+// We create abstract class to manipulate set of subclasses
+ //through common Point (class refereence)
+
+// Guitar Flute Violin ---> Instrument refereence (By Playing ....)
