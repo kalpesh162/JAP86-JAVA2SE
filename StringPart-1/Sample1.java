@@ -28,3 +28,51 @@ class Sample1{
 
 	}
 }
+
+
+char	charAt(int index)
+
+char letter=str.charAt(4);
+
+int	indexOf(int ch)
+
+int index=str.indexOf('o');
+
+
+String str="";
+
+boolean	isEmpty()
+
+int	lastIndexOf(int ch)
+
+int	length()
+
+String	replace(char oldChar, char newChar)
+
+String	substring(int beginIndex)	
+
+String	substring(int beginIndex, int endIndex)
+
+char[]	toCharArray()
+
+String	toLowerCase()
+
+String	toUpperCase()
+
+
+static String	valueOf(boolean b)	
+
+static String	valueOf(char c)	
+
+static String	valueOf(char[] data)	
+
+
+
+static String	valueOf(double d)	
+
+static String	valueOf(float f)	
+
+static String	valueOf(int i)	
+
+static String	valueOf(long l)	
+
