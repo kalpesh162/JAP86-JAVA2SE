@@ -40,6 +40,7 @@ interface One{
 	 void f1();
 	 // trying to add more abstarct method
 	 //void f2();
+	 // Compiler gets Error
 }
 
 class Test{
