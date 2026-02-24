@@ -31,6 +31,9 @@ class Example1{
 
 			StringBuilder sb4=new StringBuilder();
 
+			// int capacity()
+			// Overloaded
+			//  public StringBuilder append()
 
 
 	}
