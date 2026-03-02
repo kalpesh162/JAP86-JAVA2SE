@@ -25,7 +25,7 @@ class Program1{
 		System.out.println("ArrayIndexOutOfBoundsException"+e);		
 	}
 
-	// If we write multi catch hierachy should be chhild to parent
+	// If we write multi catch hierachy should be chhild to pare
 	// Child To Parent
 
 /*

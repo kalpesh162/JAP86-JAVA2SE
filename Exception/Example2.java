@@ -13,7 +13,6 @@ class Example2{
 		System.out.println("f2 END");
 	}
 	// we can throws multiple Exception at a time
-
 	public static void f3() throws IOException,InterruptedException{
 		
 		File file=new File("E:/C-WorkSpace-DEC-2024/BASICS/sample1.c");
@@ -32,3 +31,4 @@ class Example2{
 		System.out.println("Main END");
 	}
 }
+
