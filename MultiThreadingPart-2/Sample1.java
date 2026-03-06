@@ -18,7 +18,7 @@ class B extends Thread{
 	 }
 }
 
-// How many Threads are running activeCount()  --> no of threads running
+// How many Threads are running activeCount()  --> no of threads
 class Sample1{
 	// JVM --> main Thread --> main()
 	// Parent Thread

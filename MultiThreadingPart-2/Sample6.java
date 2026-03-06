@@ -1,9 +1,20 @@
 class Table{
-	public synchronized  void printTable(int n){
+	// Whole Code inside printTable 
+	public  void printTable(int n){
+		
+		System.out.println("Executinh Thread  "+Thread.currentThread().getName());
+
+		synchronized(this){
+	
 		for(int i=1;i<=5;i++){
 	 		System.out.println(Thread.currentThread().getName()+" "+  n*i);
-	 		try{ Thread.sleep(1000);}catch(InterruptedException e){ }
+	 		
 	 	}
+	 }
+
+
+
+
 	}
 }
 
@@ -35,7 +46,7 @@ class Three extends Thread{
 }
 
 
-class Sample5{
+class Sample6{
 	public static void main(String[] args) {
 		Table table=new Table();  // resource 
 		One one=new One(table);
@@ -50,4 +61,6 @@ class Sample5{
 		three.start();
 
 	}
+
+
 }
