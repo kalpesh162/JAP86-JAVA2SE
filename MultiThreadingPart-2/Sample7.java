@@ -4,19 +4,14 @@ class Account{
 	 		System.out.println("deposit  Current balance is    "+this.balance);
 	 		this.balance+=amt;
 	 		System.out.println("deposit  Updated balance is    "+this.balance);
-
 	 		notify();
 	 }
-
 	 public synchronized void withdraw(int amt){
 	 	System.out.println("Before withdraw  Current balance is    "+this.balance);
-
 	 	if(amt>this.balance){
 	 		try{wait();}catch(InterruptedException e){}  // Lock release
 	 	}
-
 	 	this.balance-=amt;
-
 		System.out.println("After withdraw  Current balance is    "+this.balance);	 	
 	 }
 }

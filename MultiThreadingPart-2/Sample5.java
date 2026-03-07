@@ -7,6 +7,7 @@ class Table{
 	}
 }
 
+// sleep method doesnt release lock
 class One extends Thread{
 	private Table table;
 	One(Table table){ this.table=table;}
