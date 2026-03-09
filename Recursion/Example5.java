@@ -1,8 +1,9 @@
 // Example Print 1 to 5
 class Example5{
 	static void print(int start){
-		if(start==6)
+		if(start==6){
 			return;
+		}
 
 		System.out.println(start);
 		print(start+1);

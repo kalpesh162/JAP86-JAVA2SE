@@ -5,7 +5,11 @@ class Example3{
 				return ;
 			
 			System.out.println(n);
-			f1(n-1)+f1(n-2);
+			
+			 if(n%2==0)
+			 	f1(n-1);
+			 else
+			 	f1(n-2);
 	}
 
 	public static void main(String[] args) {
