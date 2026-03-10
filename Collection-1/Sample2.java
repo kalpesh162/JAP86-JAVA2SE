@@ -8,7 +8,7 @@ public  class Sample2{
 		//Collection<Integer>numbers=new ArrayList<Integer>();
 		//List<Integer>numbers=new ArrayList<Integer>();
 
-		ArrayList<Integer>numbers=new ArrayList<Integer>();
+		ArrayList<Integer>numbers=new ArrayList<Integer>();  // 10 
 		numbers.add(11);
 		numbers.add(11);
 		numbers.add(44);
@@ -29,6 +29,10 @@ public  class Sample2{
 		System.out.println("remove"+numbers.remove(new Integer(44)));
 		System.out.println(numbers);
 
+		//int A[]={11,22,33,44,55};
+		// numbers.add(A[i])
+
+		
 
 	}
 }
