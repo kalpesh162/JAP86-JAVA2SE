@@ -44,7 +44,7 @@ public class Example1 {
 		System.out.println();
 		System.out.println("-----------------------------------");
 
-		// tell listertaor last element or total size of collection
+		// tell listertaor last element or in another way total size of collection
 		ListIterator<Integer> litr2 = numbers.listIterator(numbers.size());
 		while (litr2.hasPrevious()) {
 			System.out.print(litr2.previous() + "  ");
