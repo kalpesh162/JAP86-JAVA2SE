@@ -49,6 +49,9 @@ public class App {
 		else
 			System.out.println("NOT IS PRESENT");
 
+		// Whenever you create ref type collection you must override equals() method
+
+		// jpa86.remove(checkStudent);
 	}
 
 }
