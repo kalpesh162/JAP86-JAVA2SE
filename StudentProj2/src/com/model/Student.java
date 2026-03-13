@@ -8,7 +8,7 @@ public class Student {
 	private double marks;
 
 	public Student() {
-		// TODO Auto-generated constructor stub
+
 	}
 
 	public Student(int id, String name, double marks) {
@@ -47,8 +47,7 @@ public class Student {
 		return "Student [id=" + id + ", name=" + name + ", marks=" + marks + "]";
 	}
 
-	
-	// 
+	//
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -61,6 +60,5 @@ public class Student {
 		return id == other.id && Double.doubleToLongBits(marks) == Double.doubleToLongBits(other.marks)
 				&& Objects.equals(name, other.name);
 	}
-	
 
 }
