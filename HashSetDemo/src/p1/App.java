@@ -23,3 +23,7 @@ public class App {
 	}
 
 }
+
+
+// java.lang.Integer
+// public boolean equals() {}

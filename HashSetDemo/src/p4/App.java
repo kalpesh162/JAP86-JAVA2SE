@@ -1,6 +1,5 @@
 package p4;
 
-
 import java.util.HashSet;
 
 class Data {
@@ -13,18 +12,18 @@ class Data {
 	public String toString() {
 		return x + " ";
 	}
-	
+
 	@Override
 	public int hashCode() {
-	
-		return x%10;  
+
+		return x % 10;
 	}
-	
-	
+
 	@Override
 	public boolean equals(Object obj) {
-		Data data=(Data)obj;
-		if(this.x==data.x) return true;
+		Data data = (Data) obj;
+		if (this.x == data.x)
+			return true;
 		return false;
 	}
 }
@@ -33,19 +32,18 @@ class Data {
 // Trying 11 as Object
 // public boolean equals(Object ob){
 //  if(this==ob)  return true
-  // return false;
+// return false;
 
 // }
 
 // public boolean add(E e){
-       // step  1 Ask hahsCode Value of tahta an Objeect 
-       // Data d1=new Data(11)
-	   //  d1.hashcode()
+// step 1 Ask hahsCode Value of tahta an Objeect
+// Data d1=new Data(11)
+// d1.hashcode()
 
-      // new Data(11)  i.e. Already Collection HashSet madhe Present ahe Ka ?
+// new Data(11) i.e. Already Collection HashSet madhe Present ahe Ka ?
 // If its Presetn will ignore
 // if its not will add to particular bucket
-
 
 //}//
 
@@ -78,4 +76,3 @@ public class App {
 	}
 
 }
-
