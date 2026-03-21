@@ -44,7 +44,7 @@ public class App2 {
 		Student s10 = new Student(9, "Rohit", 67);
 		Student s11 = new Student(10, "Pooja", 93);
 
-		// TreeSet(Compartor)
+		// TreeSet(Comparator)
 		StudentNameComparator byName = new StudentNameComparator();
 		TreeSet<Student> newBatch = new TreeSet<Student>(byName);
 		// Here StudentNameComparator class compare(s1,s2) will call internally
