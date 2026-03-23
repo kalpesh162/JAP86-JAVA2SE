@@ -7,9 +7,9 @@ public class Book {
 	private String name;
 	private double price;
 	private String author;
-	
+
 	public Book() {
-		// TODO Auto-generated constructor stub
+
 	}
 
 	public Book(int id, String name, double price, String author) {
@@ -61,7 +61,6 @@ public class Book {
 	public int hashCode() {
 		return Objects.hash(author, id, name, price);
 	}
-	
 
 	@Override
 	public boolean equals(Object obj) {
@@ -75,10 +74,5 @@ public class Book {
 		return Objects.equals(author, other.author) && id == other.id && Objects.equals(name, other.name)
 				&& Double.doubleToLongBits(price) == Double.doubleToLongBits(other.price);
 	}
-	
-	
-	
-	
-	
 
 }
