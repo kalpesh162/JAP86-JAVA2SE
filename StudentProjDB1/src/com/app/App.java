@@ -18,6 +18,7 @@ public class App {
 		
 		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/studtech", "root", "root");
 		
+	
 		String sql="insert into student (id,name,marks) values (?,?,?)";
 		
 		PreparedStatement ps=con.prepareStatement(sql);
@@ -25,6 +26,8 @@ public class App {
 		ps.setInt(1, student.getId());
 		ps.setString(2, student.getName());
 		ps.setDouble(3, student.getMarks());
+		
+		
 		
 		int noOfRows=ps.executeUpdate();
 		
