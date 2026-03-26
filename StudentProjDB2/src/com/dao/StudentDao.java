@@ -28,7 +28,7 @@ public class StudentDao {
 			try {
 				ps.close();
 			} catch (SQLException e) {
-				e.printStackTrace();
+				System.out.println(e);
 			}
 		}
 		return noOfRows;
@@ -55,7 +55,7 @@ public class StudentDao {
 				if (ps != null)
 					ps.close();
 			} catch (SQLException e) {
-				e.printStackTrace();
+				System.out.println(e);
 			}
 		}
 		return noOfRows;
@@ -79,7 +79,7 @@ public class StudentDao {
 				if (ps != null)
 					ps.close();
 			} catch (SQLException e) {
-				e.printStackTrace();
+				System.out.println(e);
 			}
 		}
 		return noOfRows;
@@ -117,7 +117,7 @@ public class StudentDao {
 				if (ps != null)
 					ps.close();
 			} catch (SQLException e) {
-				e.printStackTrace();
+				System.out.println(e);
 			}
 		}
 		return students;
