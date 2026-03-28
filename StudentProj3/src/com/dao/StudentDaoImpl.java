@@ -51,17 +51,26 @@ public class StudentDaoImpl implements StudentDao {
 			ps.setDouble(2, student.getMarks());
 
 			noOfRows = ps.executeUpdate();
-			//System.out.println("   "+noOfRows);
+			// System.out.println(" "+noOfRows);
 		} catch (Exception e) {
-			System.out.println(" --->  "+e);
+			System.out.println(" --->  " + e);
 		}
 		return noOfRows;
 	}
 
 	@Override
 	public int deleteStudent(Student student) {
-		// TODO Auto-generated method stub
-		return 0;
+		int noOfRows = 0;
+		// Connection connection=DBUtility.getDBConnection(); // Connectionr r1
+		String sql = "DELETE FROM student where id=?";
+		try (Connection connection = DBUtility.getDBConnection();
+				PreparedStatement ps = connection.prepareStatement(sql)) {
+			ps.setInt(1, student.getId());
+			noOfRows = ps.executeUpdate();
+		} catch (Exception e) {
+			System.out.println(" --->  " + e);
+		}
+		return noOfRows;
 	}
 
 	@Override
