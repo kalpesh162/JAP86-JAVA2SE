@@ -15,7 +15,7 @@ public class StudentDaoImpl implements StudentDao {
 	@Override
 	public int addStudent(Student student) {
 		int noOfRows = 0;
-		Connection connection = DBUtility.getDBConnection();
+		Connection connection = DBUtility.getInstance().getDBConnection();
 		String sql = "insert into student (id,name,marks) values (?,?,?)";
 		PreparedStatement ps = null; // resource
 		try {
@@ -44,7 +44,7 @@ public class StudentDaoImpl implements StudentDao {
 		int noOfRows = 0;
 		// Connection connection=DBUtility.getDBConnection(); // Connectionr r1
 		String sql = "update student set name=? , marks=? where id=?";
-		try (Connection connection = DBUtility.getDBConnection();
+		try (Connection connection = DBUtility.getInstance().getDBConnection();
 				PreparedStatement ps = connection.prepareStatement(sql)) {
 			ps.setInt(3, student.getId());
 			ps.setString(1, student.getName());
@@ -63,7 +63,7 @@ public class StudentDaoImpl implements StudentDao {
 		int noOfRows = 0;
 		// Connection connection=DBUtility.getDBConnection(); // Connectionr r1
 		String sql = "DELETE FROM student where id=?";
-		try (Connection connection = DBUtility.getDBConnection();
+		try (Connection connection = DBUtility.getInstance().getDBConnection();
 				PreparedStatement ps = connection.prepareStatement(sql)) {
 			ps.setInt(1, student.getId());
 			noOfRows = ps.executeUpdate();
@@ -78,7 +78,7 @@ public class StudentDaoImpl implements StudentDao {
 		List<Student> students = new ArrayList<Student>();
 		String sql = "SELECT * FROM STUDENT";
 
-		try (Connection connection = DBUtility.getDBConnection();
+		try (Connection connection = DBUtility.getInstance().getDBConnection();
 				PreparedStatement ps = connection.prepareStatement(sql);
 				ResultSet rs = ps.executeQuery()) {
 
@@ -102,7 +102,7 @@ public class StudentDaoImpl implements StudentDao {
 		String sql = "SELECT * FROM STUDENT WHERE id=?";
 		Student student = null;
 
-		try (Connection connection = DBUtility.getDBConnection();
+		try (Connection connection = DBUtility.getInstance().getDBConnection();
 				PreparedStatement ps = connection.prepareStatement(sql);) {
 
 			ps.setInt(1, id);
