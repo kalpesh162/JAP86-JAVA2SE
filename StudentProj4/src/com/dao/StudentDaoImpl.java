@@ -8,33 +8,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.model.Student;
-import com.utility.DBUtility;
+import com.util.DBUtility;
 
 public class StudentDaoImpl implements StudentDao {
 
 	@Override
 	public int addStudent(Student student) {
 		int noOfRows = 0;
-		Connection connection = DBUtility.getInstance().getDBConnection();
 		String sql = "insert into student (id,name,marks) values (?,?,?)";
-		PreparedStatement ps = null; // resource
-		try {
-			ps = connection.prepareStatement(sql);
+		try (Connection connection = DBUtility.getInstance().getDBConnection();
+				PreparedStatement ps = connection.prepareStatement(sql)) {
 			ps.setInt(1, student.getId());
 			ps.setString(2, student.getName());
 			ps.setDouble(3, student.getMarks());
-
 			noOfRows = ps.executeUpdate();
-
 		} catch (Exception e) {
-			System.out.println(e);
-		} finally {
-			try {
-				if (ps != null)
-					ps.close();
-			} catch (Exception e) {
-				System.out.println(e);
-			}
+
 		}
 		return noOfRows;
 	}
