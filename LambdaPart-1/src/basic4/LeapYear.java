@@ -22,6 +22,7 @@ public class LeapYear {
 		System.out.println(isALeapYear.test(200));
 		System.out.println(isALeapYear.test(1992));
 
+		
 	}
 
 }
