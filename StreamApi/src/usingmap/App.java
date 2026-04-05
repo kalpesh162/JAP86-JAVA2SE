@@ -17,6 +17,7 @@ public class App {
 		actors.put(5, "Arjun");
 
 		// Set<Map.Entry<Integer, String>> entry=actors.entrySet();
+
 		for (Entry<Integer, String> entry : actors.entrySet()) {
 			System.out.println(entry.getKey() + "  " + entry.getValue());
 		}
@@ -43,25 +44,20 @@ public class App {
 			System.out.print(val + "  ");
 
 		System.out.println();
-		
+
 		System.out.println("++++++++++++++++++++++++++++++++++++");
-		
-		
-		actors.entrySet().forEach((entry2) -> System.out.println(entry2.getKey()+"  "+ entry2.getValue()));
+
+		actors.entrySet().forEach((entry2) -> System.out.println(entry2.getKey() + "  " + entry2.getValue()));
 		System.out.println("++++++++++++++++++++++++++++++++++++");
-		
-		actors.forEach((key,value) -> System.out.println(key +" "+ value));
-		
+
+		actors.forEach((key, value) -> System.out.println(key + " " + value));
+
+		// actors -- MAP -- forEach(BiConsumer) --> accept(T t, U u)
 		// forEach(BiConsumer)
 		System.out.println("****************************");
-		
-		
+
 		actors.entrySet().forEach(System.out::println);
-		
-		
-		
-		
-		
+
 	}
 
 }
