@@ -56,7 +56,7 @@ public class App {
 
 		String arr[]= {"A", "B", "C", "D"};
 		Stream<String> str=Arrays.stream(arr);
-	
+
 		
 	}
 
