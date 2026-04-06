@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class App {
@@ -58,6 +60,19 @@ public class App {
 		friends.stream()
 			   .map(String::length)
 			   .forEach(System.out::println);
+		
+		System.out.println("Collecting result");
+		
+		List<String>finalResult=friends.stream()
+			   .map(String::toUpperCase)
+			   .collect(Collectors.toList());
+		
+		// collect(Collector)   Terminal Operation
+		//  map  Intermediate Operation
+		
+		System.out.println(finalResult);
+		
+		
 
 	}
 
