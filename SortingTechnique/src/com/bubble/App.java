@@ -1,40 +1,9 @@
 package com.bubble;
 
-import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
 public class App {
-
-	public static void main(String[] args) {
-
-		Scanner scanner = new Scanner(System.in);
-		int size;
-		System.out.println("Enter Size of an Array ");
-		size = scanner.nextInt();
-
-		int arr[] = new int[size];
-		inputArray(arr); // Array is filled with numbers
-
-		Arrays.sort(arr); // Array already Sorted
-		printArray(arr);
-
-		System.out.println("Enter Element To Search ");
-		
-		int element = scanner.nextInt();
-		
-		
-		long sTime = System.currentTimeMillis();
-		int index = binarySearch(arr, element);   // CALL 
-		long eTime = System.currentTimeMillis();
-
-		if (index != -1)
-			System.out.println("Found At " + index);
-		else
-			System.out.println("NO  Found " + element);
-
-		System.out.println("Time Required To Search  " + (eTime - sTime) + "  ms");
-	}
 
 	private static void printArray(int[] arr) {
 		System.out.println("**** Printing Array **** ");
@@ -50,21 +19,39 @@ public class App {
 
 	}
 
-	public static int binarySearch(int arr[], int element) {
-		int low = 0;
-		int high = arr.length;
+	public static void bubbleSort(int A[]) {
+		for (int i = 0; i < A.length - 1; i++) { // PASS
 
-		while (low <= high) {
-			int mid = (low + high) / 2;
-			if (arr[mid] == element)
-				return mid;
-			else if (arr[mid] < element)
-				low = mid + 1;
-			else if (arr[mid] > element)
-				high = mid - 1;
-
+			for (int j = 0; j < A.length - 1 - i; j++) {
+				if (A[j] > A[j + 1]) {
+					int temp = A[j];
+					A[j] = A[j + 1];
+					A[j + 1] = temp;
+				}
+			}
 		}
-		return -1;
+	}
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int size;
+		System.out.println("Enter Size of an Array ");
+		size = scanner.nextInt();
+
+		int arr[] = new int[size];
+		inputArray(arr); // Array is filled with numbers
+
+		printArray(arr);
+
+		long sTime = System.currentTimeMillis();
+
+		bubbleSort(arr);
+		long eTime = System.currentTimeMillis();
+
+		printArray(arr);
+
+		System.out.println("Time Required To Sort  " + (eTime - sTime) + "  ms");
+
 	}
 
 }
