@@ -11,7 +11,7 @@ public class App {
 				return i;
 		return -1;
 	}
- 
+
 	private static void inputArray(int[] arr) {
 		Random random = new Random();
 		for (int i = 0; i < arr.length; i++) {
@@ -44,15 +44,17 @@ public class App {
 		System.out.println("Enter ELEMENT TO SEARCH");
 		int ele = scanner.nextInt();
 
-		long sTime=System.currentTimeMillis();
+		long sTime = System.currentTimeMillis();
 		int index = linearSearch(arr, ele);
-		long eTime=System.currentTimeMillis();
-		
+		long eTime = System.currentTimeMillis();
+
 		if (index != -1)
 			System.out.println("Ele Ment Found " + ele + " AT index " + index);
 
 		else
 			System.out.println("NOT FOUND");
+
+		System.out.println("Time Required To Search  " + (eTime - sTime) + "  ms");
 
 	}
 
