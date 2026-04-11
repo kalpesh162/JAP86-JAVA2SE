@@ -1,4 +1,4 @@
-package com.select;
+package com.insert;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -20,19 +20,20 @@ public class App {
 	}
 
 	// Time Complexity n*n
-	public static void selectionSort(int A[]) {
-		for (int i = 0; i < A.length - 1; i++) { //
-			int minIndex = i;
+	public static void insertionSort(int A[]) {
 
-			for (int j = i + 1; j < A.length; j++) {
-				if (A[minIndex] > A[j])
-					minIndex = j;
+		for (int i = 1; i < A.length; i++) {
+			int key = A[i];
+			int j = i - 1;
+
+			while (j >= 0 && A[j] > key) {
+				A[j + 1] = A[j];
+				j--;
 			}
-			// SWAP
-			int temp = A[i];
-			A[i] = A[minIndex];
-			A[minIndex] = temp;
+
+			A[j + 1] = key;
 		}
+
 	}
 
 	public static void main(String[] args) {
@@ -48,7 +49,7 @@ public class App {
 
 		long sTime = System.currentTimeMillis();
 
-		selectionSort(arr);
+		insertionSort(arr);
 		long eTime = System.currentTimeMillis();
 
 		printArray(arr);
