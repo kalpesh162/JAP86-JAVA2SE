@@ -1,7 +1,5 @@
 package com.circularQ;
 
-import java.util.zip.CRC32;
-
 public class App {
 
 	public static void main(String[] args) {
