@@ -1,17 +1,22 @@
 package basic;
 
-import basic.SinglyLinkedList.Node;
-
 public class App {
 	
 	public static void main(String[] args) {
 		
 		SinglyLinkedList list=new SinglyLinkedList();   // head=null
 		
-		Node newNode=new Node(10);   // [100]  | 10 | null|
+		list.addFirst(10);
+		list.addFirst(20);
+		list.addFirst(30);
+		list.addFirst(40);
 		
-		Node head=list.getHead();
-		head=newNode;
+		list.display();
+		
+		list.addLast(50);
+		list.addLast(60);
+		list.addLast(70);
+		list.display();
 		
 		
 	}
