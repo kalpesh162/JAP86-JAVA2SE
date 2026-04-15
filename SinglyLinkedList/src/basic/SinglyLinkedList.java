@@ -90,16 +90,14 @@ public class SinglyLinkedList {
 		}
 	}
 
-	public void deleteLast() {
+	public void deleteLast() { // Case 1 Case 2 Case 3
 		if (head == null) {
 			System.out.println("List is Empty");
 			return;
-		}
-		else if(head.next==null) {
-			head=head.next;
-					
-		}
-		else {
+		} else if (head.next == null) {
+			head = head.next;
+
+		} else {
 			Node trav = head;
 			Node trav_bk = null;
 
@@ -110,6 +108,28 @@ public class SinglyLinkedList {
 			trav_bk.next = null;
 
 			trav = null;
+		}
+
+	}
+
+	public void addAtPos(int pos, int data) {
+		Node newNode = new Node(data);
+
+		if (pos < 1) {
+			System.out.println("Postion Not Valid");
+		} else if (pos == 1) {
+			addLast(data);
+		} else {
+			Node trav = head;
+			for (int i = 1; i < pos - 1 && trav.next != null; i++) {
+				// if(trav.next==null)
+				// break;
+				trav = trav.next;
+			}
+
+			newNode.next = trav.next;
+			trav.next = newNode;
+
 		}
 
 	}
