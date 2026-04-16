@@ -163,12 +163,9 @@ public class SinglyLinkedList {
 	}
 
 	public void reverseDisplay(Node head) {
-
 		if (head == null)
 			return;
-
 		reverseDisplay(head.next);
-
 		System.out.println(" --> " + head.data);
 	}
 
