@@ -18,6 +18,16 @@ public class App {
 		linkedList.addLast(80);
 		System.out.println("-------------------------------");
 		linkedList.displayList();
+		
+		linkedList.deleteFirst();
+		System.out.println("---------------After deleteFirst----------------");
+		linkedList.displayList();
+		
+		linkedList.deleteLast();
+		
+		System.out.println("---------------After deleteLast----------------");
+		linkedList.displayList();
+		
 
 	}
 

@@ -66,4 +66,30 @@ public class LinkedList {
 		size++;
 	}
 
+	public void deleteFirst() {
+
+		if (head == null)
+			return;
+		else {
+			head = head.next;
+			head.prev = null;
+		}
+
+		size--;
+	}
+
+	public void deleteLast() {
+		if (head == null)
+			return;
+		else if (head.next == null) {
+			head = tail = null;
+		} else {
+
+			tail = tail.prev;
+			tail.next = null;
+
+		}
+
+	}
+
 }
