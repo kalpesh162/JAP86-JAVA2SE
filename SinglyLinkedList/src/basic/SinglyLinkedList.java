@@ -157,9 +157,19 @@ public class SinglyLinkedList {
 		}
 
 	}
-	
+
 	public void deleteAll() {
-		head=null;
+		head = null;
+	}
+
+	public void reverseDisplay(Node head) {
+
+		if (head == null)
+			return;
+
+		reverseDisplay(head.next);
+
+		System.out.println(" --> " + head.data);
 	}
 
 }
