@@ -114,6 +114,8 @@ public class SinglyLinkedList {
 
 	public void addAtPos(int pos, int data) {
 		Node newNode = new Node(data);
+		if (head == null)
+			head = newNode;
 
 		if (pos < 1) {
 			System.out.println("Postion Not Valid");
@@ -132,6 +134,32 @@ public class SinglyLinkedList {
 
 		}
 
+	}
+
+	public void deleteAtPos(int pos) {
+		// case 1 : if list is empty
+		if (head == null)
+			return;
+		Node trav = head;
+		Node trav_bk = null;
+		if (pos < 1)
+			return;
+		else if (pos == 1)
+			head = head.next;
+		else {
+
+			for (int i = 1; i < pos && trav.next != null; i++) {
+				trav_bk = trav;
+				trav = trav.next;
+			}
+
+			trav_bk.next = trav.next;
+		}
+
+	}
+	
+	public void deleteAll() {
+		head=null;
 	}
 
 }
