@@ -48,6 +48,7 @@ public class LinkedList {
 			System.out.print(trav.data + " ==> ");
 			trav = trav.next;
 		}
+		System.out.println();
 
 	}
 
@@ -88,6 +89,67 @@ public class LinkedList {
 			tail = tail.prev;
 			tail.next = null;
 
+		}
+		size--;
+
+	}
+
+	public void addAtPos(int pos, int data) {
+
+		if (pos < 1 || pos + 1 > size)
+			return;
+		Node newNode = new Node(data);
+		if (head == null) {
+			head = tail = newNode;
+		} else if (pos == 1) {
+			addFirst(data);
+		} else if (pos == size + 1) {
+			addLast(data);
+		} else {
+			Node trav = head;
+			for (int i = 1; i < pos - 1; i++) {
+				trav = trav.next;
+			}
+			newNode.next = trav.next;
+			newNode.prev = trav;
+			trav.next.prev = newNode;
+			trav.next = newNode;
+
+		}
+		size++;
+	}
+
+	public void deleteAtPos(int pos) {
+		if (pos < 1 || pos + 1 > size)
+			return;
+
+		else if (head == null)
+			return;
+
+		else if (head == tail) {
+			head = tail = null;
+		} else if (pos == 1) {
+			deleteFirst();
+		} else if (pos == size + 1) {
+			deleteLast();
+		} else {
+			Node trav = head;
+			for (int i = 1; i < pos; i++)
+				trav = trav.next;
+
+			trav.next.prev = trav.prev;
+			trav.prev.next = trav.next;
+
+		}
+		size--;
+
+	}
+
+	public void reverseDisplay() {
+		Node trav = tail;
+		while (trav != null) {
+			System.out.println(" --> " + trav.data);
+			trav = trav.prev;
 		}
 
 	}
