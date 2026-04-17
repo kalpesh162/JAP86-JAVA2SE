@@ -68,14 +68,14 @@ public class LinkedList {
 	}
 
 	public void deleteFirst() {
-
 		if (head == null)
 			return;
-		else {
+		else if (head == tail) {
+			head = head.next;
+		} else {
 			head = head.next;
 			head.prev = null;
 		}
-
 		size--;
 	}
 
@@ -122,10 +122,8 @@ public class LinkedList {
 	public void deleteAtPos(int pos) {
 		if (pos < 1 || pos + 1 > size)
 			return;
-
 		else if (head == null)
 			return;
-
 		else if (head == tail) {
 			head = tail = null;
 		} else if (pos == 1) {
@@ -139,10 +137,8 @@ public class LinkedList {
 
 			trav.next.prev = trav.prev;
 			trav.prev.next = trav.next;
-
 		}
 		size--;
-
 	}
 
 	public void reverseDisplay() {
@@ -151,7 +147,6 @@ public class LinkedList {
 			System.out.println(" --> " + trav.data);
 			trav = trav.prev;
 		}
-
 	}
 
 }
