@@ -71,7 +71,7 @@ public class LinkedList {
 		if (head == null)
 			return;
 		else if (head == tail) {
-			head = head.next;
+			head = null;
 		} else {
 			head = head.next;
 			head.prev = null;
